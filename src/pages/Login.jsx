@@ -29,11 +29,11 @@ const Login = () => {
   };
   return (
     <>
-      <div className="flex items-center bg-gray-300 justify-between px-6 md:px-[200px] py-4">
+      <div className="flex items-center rounded-md bg-gray-300 justify-between px-6 md:px-[200px] py-4">
         <h1 className="text-lg md:text-xl hover:scale-110 text-red-500 font-extrabold">
           <Link to="/">BlogVerse</Link>
         </h1>
-        <h3 className="font-bold hover:scale-110">
+        <h3 className="font-bold hover:scale-110 hover:text-red-500">
           <Link to="/register">Register</Link>
         </h3>
       </div>
@@ -42,13 +42,13 @@ const Login = () => {
           <h1 className="text-xl font-bold text-left">Login to your account</h1>
           <input
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border-2 border-black rounded-lg outline-0"
+            className="w-full px-4 py-2 border-2 border-black rounded-lg outline-0 hover:scale-105"
             type="text"
             placeholder="Enter your email"
           />
           <input
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-2 border-2 border-black rounded-lg outline-0"
+            className="w-full px-4 py-2 border-2 border-black rounded-lg outline-0 hover:scale-105"
             type="password"
             placeholder="Enter your password"
           />
@@ -63,7 +63,7 @@ const Login = () => {
           )}
           <div className="flex justify-center items-center space-x-3">
             <p>New here?</p>
-            <p className="text-gray-500 hover:scale-105 font-extrabold hover:text-black ">
+            <p className="text-gray-500 hover:scale-105 font-extrabold hover:text-black hover:text-red-500">
               <Link to="/register">Register</Link>
             </p>
           </div>

@@ -31,11 +31,11 @@ const Register = () => {
 
   return (
     <>
-      <div className="flex items-center bg-gray-300 justify-between px-6 md:px-[200px] py-4">
+      <div className="flex items-center  rounded-lg bg-gray-300 justify-between px-6 md:px-[200px] py-4">
         <h1 className="text-lg md:text-xl hover:scale-110 text-red-500 font-extrabold">
           <Link to="/">BlogVerse</Link>
         </h1>
-        <h3 className="font-extrabold hover:scale-110">
+        <h3 className="font-extrabold hover:scale-110 hover:text-red-500">
           <Link to="/login">Login</Link>
         </h3>
       </div>
@@ -44,19 +44,19 @@ const Register = () => {
           <h1 className="text-xl font-bold text-left">Create an account</h1>
           <input
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full px-4 py-2 border-2 border-black rounded-lg outline-0"
+            className="w-full px-4 py-2 border-2 border-black rounded-lg outline-0 hover:scale-105"
             type="text"
             placeholder="Enter your username"
           />
           <input
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border-2 border-black rounded-lg outline-0"
+            className="w-full px-4 py-2 border-2 border-black rounded-lg outline-0 hover:scale-105"
             type="text"
             placeholder="Enter your email"
           />
           <input
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-2 border-2 border-black rounded-lg outline-0"
+            className="w-full px-4 py-2 border-2 border-black rounded-lg outline-0 hover:scale-105"
             type="password"
             placeholder="Enter your password"
           />
@@ -71,7 +71,7 @@ const Register = () => {
           )}
           <div className="flex justify-center items-center space-x-3">
             <p>Already have an account?</p>
-            <p className="text-gray-500 font-bold hover:scale-105 hover:text-black">
+            <p className="text-gray-500 font-bold hover:scale-105 hover:text-black hover:text-red-500">
               <Link to="/login">Login</Link>
             </p>
           </div>

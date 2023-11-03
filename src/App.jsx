@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import PostDetails from "./pages/PostDetails";
-import CreatePost from "./pages/CreatePost";
-import EditPost from "./pages/EditPost";
-import Profile from "./pages/Profile";
-import { UserContextProvider } from "./context/UserContext";
-import MyBlogs from "./pages/MyBlogs";
+import Home from "./pages/Home.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import PostDetails from "./pages/PostDetails.jsx";
+import CreatePost from "./pages/CreatePost.jsx";
+import EditPost from "./pages/EditPost.jsx";
+import Profile from "./pages/Profile.jsx";
+import { UserContextProvider } from "./context/UserContext.jsx";
+import MyBlogs from "./pages/MyBlogs.jsx";
 
 const App = () => {
   return (

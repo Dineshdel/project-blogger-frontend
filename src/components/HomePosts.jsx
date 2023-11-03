@@ -3,7 +3,7 @@ import { IF } from "../url";
 
 const HomePosts = ({ post }) => {
   return (
-    <div className="w-full flex mt-8 space-x-4 hover:bg-gray-100 ronded-md hover:scale-105 shadow-md">
+    <div className="w-full flex mt-8 space-x-4 hover:bg-gray-100 rounded-md hover:scale-105 shadow-md">
       {/* left */}
       <div className="w-[35%] h-[200px] flex justify-center items-center">
         <img

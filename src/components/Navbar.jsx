@@ -21,11 +21,11 @@ const Navbar = () => {
   // const user = false;
 
   return (
-    <div className="flex items-center bg-gray-300 justify-between px-20 md:px-[200px] py-4">
+    <div className="flex items-center rounded-md bg-gradient-to-r from-gray-300 to-gray-400 justify-between px-20 md:px-[200px] py-4">
       <div>
+        <img class="h-10 w-10" src="img1.png"></img>
         <Link to="/">
           <h1 className="text-lg md:text-xl hover:scale-110 text-red-500 hover:text-red-600 font-extrabold">
-            {/* <img src="/img1.png" style={{ width: "50px", height: "50px" }} /> */}
             BLOG-VERSE
           </h1>
         </Link>
@@ -37,7 +37,7 @@ const Navbar = () => {
               navigate(prompt ? "?search=" + prompt : navigate("/"))
             }
             onChange={(e) => setPrompt(e.target.value)}
-            className="outline-none italic bg-gray-300"
+            className="outline-none italic bg-gradient-to-r from-gray-350 to-gray-300 rounded"
             placeholder="Search a post"
             type="text"
           />
@@ -55,23 +55,23 @@ const Navbar = () => {
 
       <div className="hidden md:flex items-center justify-center space-x-2 md:space-x-4">
         {user ? (
-          <h3 className="font-bold hover:scale-110">
+          <h3 className="font-bold hover:scale-110 hover:text-red-500">
             <Link to="/write">Write</Link>
           </h3>
         ) : (
-          <h3 className="font-bold hover:scale-110">
+          <h3 className="font-bold hover:scale-110 hover:text-red-500">
             <Link to="/login">Login</Link>
           </h3>
         )}
         {user ? (
           <div onClick={showMenu}>
-            <p className="cursor-pointer hover:scale-110 relative">
+            <p className="cursor-pointer hover:scale-110 relative hover:text-red-500">
               <FaBars />
             </p>
             {menu && <Menu />}
           </div>
         ) : (
-          <h3 className="font-bold hover:scale-110">
+          <h3 className="font-bold hover:scale-110 hover:text-red-500">
             <Link to="/register">Register</Link>
           </h3>
         )}
