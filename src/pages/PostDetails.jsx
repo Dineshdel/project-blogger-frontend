@@ -87,13 +87,13 @@ const PostDetails = () => {
     <div>
       <Navbar />
       {loader ? (
-        <div className="h-[80vh] flex justify-center items-center w-full">
+        <div className="h-[72vh] flex justify-center items-center w-full">
           <Loader />
         </div>
       ) : (
         <div className="px-8 md:px-[200px] mt-8">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl italic text-amber-400	font-bold text-black md:text-3xl">
+            <h1 className="text-2xl italic text-amber-400	font-bold md:text-3xl">
               {post.title}
             </h1>
             {user?._id === post?.userId && (
@@ -147,7 +147,7 @@ const PostDetails = () => {
             />
             <button
               onClick={postComment}
-              className="bg-black text-sm text-white px-2 py-2 md:w-[20%] mt-4 md:mt-0"
+              className="bg-blue-400  hover:scale-105 text-sm text-white px-2 py-2 md:w-[20%] mt-4 md:mt-0"
             >
               Add Comment
             </button>

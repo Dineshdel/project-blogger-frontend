@@ -111,12 +111,12 @@ const Profile = () => {
               >
                 Update
               </button>
-              <button
+              {/* <button
                 onClick={handleUserDelete}
                 className="text-white font-semibold bg-blue-400 px-4 py-2 hover:scale-110"
               >
                 Delete
-              </button>
+              </button> */}
             </div>
             {updated && (
               <h3 className="text-green-500 text-sm text-center mt-4">

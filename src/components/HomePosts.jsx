@@ -25,7 +25,10 @@ const HomePosts = ({ post }) => {
           </div>
         </div>
         <p className="italic text-sm md:text-lg">
-          {post.desc.slice(0, 200) + " ...Read more"}
+          {post.desc.slice(0, 200)}
+          <span style={{ fontWeight: "600" }} className="hover:text-blue-400">
+            ...Read more
+          </span>
         </p>
       </div>
     </div>

@@ -32,15 +32,31 @@ const Register = () => {
   return (
     <>
       <div className="flex items-center  rounded-lg bg-gray-300 justify-between px-6 md:px-[200px] py-4">
-        <h1 className="text-lg md:text-xl hover:scale-110 text-red-500 font-extrabold">
-          <Link to="/">BlogVerse</Link>
-        </h1>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          className="hover:scale-110"
+        >
+          <img class="h-10 w-10" src="/img1.png"></img>
+          <Link to="/">
+            <h1 className="text-lg md:text-xl text-orange-600 hover:text-orange-600 font-extrabold">
+              LOG-VERSE
+            </h1>
+          </Link>
+        </div>
         <h3 className="font-extrabold hover:scale-110 hover:text-red-500">
           <Link to="/login">Login</Link>
         </h3>
       </div>
-      <div className="w-full flex justify-center items-center h-[80vh] ">
-        <div className="flex flex-col justify-center items-center space-y-4 w-[80%] md:w-[25%]">
+      <div className="w-full flex justify-center items-center h-[72vh]">
+        <div
+          className="flex flex-col justify-center items-center space-y-4 w-[80%] md:w-[25%] shadow-2xl rounded-lg"
+          style={{ padding: "10px" }}
+        >
           <h1 className="text-xl font-bold text-left">Create an account</h1>
           <input
             onChange={(e) => setUsername(e.target.value)}

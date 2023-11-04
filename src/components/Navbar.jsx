@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { useContext, useState } from "react";
 import Menu from "./Menu";
 import { UserContext } from "../context/UserContext";
+// import { Image } from "/public/img1.png";//
 
 const Navbar = () => {
   const [prompt, setPrompt] = useState("");
@@ -22,11 +23,19 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center rounded-md bg-gradient-to-r from-gray-300 to-gray-400 justify-between px-20 md:px-[200px] py-4">
-      <div>
-        <img class="h-10 w-10" src="img1.png"></img>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        className="hover:scale-110"
+      >
+        <img class="h-10 w-10" src="/img1.png"></img>
         <Link to="/">
-          <h1 className="text-lg md:text-xl hover:scale-110 text-red-500 hover:text-red-600 font-extrabold">
-            BLOG-VERSE
+          <h1 className="text-lg md:text-xl text-orange-600 hover:text-orange-600 font-extrabold">
+            LOG-VERSE
           </h1>
         </Link>
       </div>
