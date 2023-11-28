@@ -32,11 +32,11 @@ const Profile = () => {
   const handleUserUpdate = async () => {
     setUpdated(false);
     try {
-      const res = await axios.put(
-        URL + "/api/users/" + user._id,
-        { username, email, password },
-        { withCredentials: true }
-      );
+      const res = await axios.put(URL + "/api/users/" + user._id, {
+        username,
+        email,
+        password,
+      });
       // console.log(res.data)
       setUpdated(true);
     } catch (err) {
@@ -47,9 +47,7 @@ const Profile = () => {
 
   const handleUserDelete = async () => {
     try {
-      const res = await axios.delete(URL + "/api/users/" + user._id, {
-        withCredentials: true,
-      });
+      const res = await axios.delete(URL + "/api/users/" + user._id);
       setUser(null);
       navigate("/");
       // console.log(res.data)
