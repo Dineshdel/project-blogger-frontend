@@ -17,7 +17,8 @@ const Login = () => {
       const res = await axios.post(
         URL + "/api/auth/login",
         { email, password },
-        { withCredentials: true }
+        { withCredentials: true },
+        { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
       );
       setUser(res.data);
       navigate("/");
