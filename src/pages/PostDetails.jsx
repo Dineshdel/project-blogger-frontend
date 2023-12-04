@@ -64,7 +64,7 @@ const PostDetails = () => {
     try {
       const res = await axios.post(URL + "/api/comments/create", {
         comment: comment,
-        author: user.username,
+        author: localStorage.getItem("username"),
         postId: postId,
         userId: localStorage.getItem("userId"),
       });
