@@ -14,14 +14,14 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post(
-        URL + "/api/auth/login",
-        { email, password },
-        { withCredentials: true },
-        { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
-      );
+      const res = await axios.post(URL + "/api/auth/login", {
+        email,
+        password,
+      });
       setUser(res.data);
       navigate("/");
+      localStorage.setItem("email", email);
+      localStorage.setItem("userId", res.data.userId);
     } catch (err) {
       setError(true);
       console.log(err);

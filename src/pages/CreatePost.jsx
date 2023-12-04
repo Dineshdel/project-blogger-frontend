@@ -37,8 +37,8 @@ const CreatePost = () => {
     const post = {
       title,
       desc,
-      username: "test5@gmail.com",
-      userId: "65659c7a266b9fc5ae887d61",
+      username: localStorage.getItem("email"),
+      userId: localStorage.getItem("userId"),
       categories: cats,
     };
 
