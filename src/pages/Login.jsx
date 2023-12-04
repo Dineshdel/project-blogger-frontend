@@ -20,7 +20,7 @@ const Login = () => {
       });
       setUser(res.data);
       navigate("/");
-      localStorage.setItem("email", email);
+      localStorage.setItem("username", res.data.userName);
       localStorage.setItem("userId", res.data.userId);
     } catch (err) {
       setError(true);

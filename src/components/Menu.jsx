@@ -15,7 +15,7 @@ const Menu = () => {
       // console.log(res)
       setUser(null);
       navigate("/login");
-      localStorage.removeItem("email");
+      localStorage.removeItem("username");
       localStorage.removeItem("userId");
     } catch (err) {
       console.log(err);
