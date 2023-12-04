@@ -34,8 +34,8 @@ const EditPost = () => {
     const post = {
       title,
       desc,
-      username: user.username,
-      userId: user._id,
+      username: localStorage.getItem("username"),
+      userId: localStorage.getItem("userId"),
       categories: cats,
     };
 

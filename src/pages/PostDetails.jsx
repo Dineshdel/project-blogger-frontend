@@ -66,7 +66,7 @@ const PostDetails = () => {
         comment: comment,
         author: user.username,
         postId: postId,
-        userId: user._id,
+        userId: localStorage.getItem("userId"),
       });
 
       // fetchPostComments()
