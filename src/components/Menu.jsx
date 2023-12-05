@@ -35,7 +35,7 @@ const Menu = () => {
       )}
       {user && (
         <h3 className="text-white text-sm hover:text-gray-500 cursor-pointer">
-          <Link to={"/profile/" + user._id}>Profile</Link>
+          <Link to={"/profile/" + localStorage.getItem("userId")}>Profile</Link>
         </h3>
       )}
       {user && (
@@ -45,7 +45,9 @@ const Menu = () => {
       )}
       {user && (
         <h3 className="text-white text-sm hover:text-gray-500 cursor-pointer">
-          <Link to={"/myblogs/" + user._id}>My blogs</Link>
+          <Link to={"/myblogs/" + localStorage.getItem("userId")}>
+            My blogs
+          </Link>
         </h3>
       )}
       {user && (

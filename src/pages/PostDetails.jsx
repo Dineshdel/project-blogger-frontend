@@ -17,6 +17,7 @@ const PostDetails = () => {
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
   const [loader, setLoader] = useState(false);
+  const [tempURL, setTempURL] = useState("");
   const navigate = useNavigate();
 
   const fetchPost = async () => {
@@ -57,6 +58,7 @@ const PostDetails = () => {
 
   useEffect(() => {
     fetchPostComments();
+    setTempURL(window.location.href);
   }, [postId]);
 
   const postComment = async (e) => {
@@ -71,12 +73,12 @@ const PostDetails = () => {
 
       // fetchPostComments()
       // setComment("")
-      window.location.reload(true);
+      // window.location.reload(true);
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
   };
-
   return (
     <div>
       <Navbar />
@@ -90,7 +92,7 @@ const PostDetails = () => {
             <h1 className="text-2xl italic text-amber-400	font-bold md:text-3xl">
               {post.title}
             </h1>
-            {user?._id === post?.userId && (
+            {localStorage.getItem("userId") === post?.userId && (
               <div className="flex items-center justify-center space-x-2">
                 <p
                   className="cursor-pointer"

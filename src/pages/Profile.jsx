@@ -20,7 +20,9 @@ const Profile = () => {
 
   const fetchProfile = async () => {
     try {
-      const res = await axios.get(URL + "/api/users/" + user._id);
+      const res = await axios.get(
+        URL + "/api/users/" + localStorage.getItem("userId")
+      );
       setUsername(res.data.username);
       setEmail(res.data.email);
       setPassword(res.data.password);
@@ -32,11 +34,14 @@ const Profile = () => {
   const handleUserUpdate = async () => {
     setUpdated(false);
     try {
-      const res = await axios.put(URL + "/api/users/" + user._id, {
-        username,
-        email,
-        password,
-      });
+      const res = await axios.put(
+        URL + "/api/users/" + localStorage.getItem("userId"),
+        {
+          username,
+          email,
+          password,
+        }
+      );
       // console.log(res.data)
       setUpdated(true);
     } catch (err) {
@@ -47,7 +52,9 @@ const Profile = () => {
 
   const handleUserDelete = async () => {
     try {
-      const res = await axios.delete(URL + "/api/users/" + user._id);
+      const res = await axios.delete(
+        URL + "/api/users/" + localStorage.getItem("userId")
+      );
       setUser(null);
       navigate("/");
       // console.log(res.data)
@@ -58,7 +65,9 @@ const Profile = () => {
   // console.log(user)
   const fetchUserPosts = async () => {
     try {
-      const res = await axios.get(URL + "/api/posts/user/" + user._id);
+      const res = await axios.get(
+        URL + "/api/posts/user/" + localStorage.getItem("userId")
+      );
       // console.log(res.data)
       setPosts(res.data);
     } catch (err) {
